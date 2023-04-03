@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/location"
+        android:enabled="true"
+        android:icon="@drawable/location_on_fill0_wght500_grad0_opsz48"
+        android:title="@string/location_nav_item"/>
+    <item
+        android:id="@+id/dairy"
+        android:enabled="true"
+        android:icon="@drawable/diary_fill0_wght500_grad0_opsz48"
+        android:title="@string/diary_nav_item"/>
+    <item
+        android:id="@+id/watch"
+        android:enabled="true"
+        android:icon="@drawable/watch_fill0_wght500_grad0_opsz48"
+        android:title="@string/watch_nav_item"/>
+    <item
+        android:id="@+id/my"
+        android:enabled="true"
+        android:icon="@drawable/my_fill0_wght500_grad0_opsz48"
+        android:title="@string/my_nav_item"/>
+</menu>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.zhaoxinyu.bind.ui.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_updateUserInfoFragment"
+            app:destination="@id/updateUserInfoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_editDiaryFragment"
+            app:destination="@id/editDiaryFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.zhaoxinyu.bind.ui.user.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment><action android:id="@+id/action_global_loginFragment" app:destination="@id/loginFragment"/>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.zhaoxinyu.bind.ui.user.RegisterFragment"
+        android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/updateUserInfoFragment"
+        android:name="com.zhaoxinyu.bind.ui.user.UpdateUserInfoFragment"
+        android:label="UpdateUserInfoFragment" />
+    <fragment
+        android:id="@+id/editDiaryFragment"
+        android:name="com.zhaoxinyu.bind.ui.diary.EditDiaryFragment"
+        android:label="EditDiaryFragment" >
+        <action
+            android:id="@+id/action_editDiaryFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+</navigation>
