@@ -652,7 +652,7 @@ class WatchTestFragment:Fragment() {
             }
 
             //告诉服务器放映室已开启
-            Network.watchTogetherService.startStreaming(
+            val o=Network.watchTogetherService.startStreaming(
                 hashMapOf("user" to Gson().toJson(MainActivity.loggedUser),"mInfo" to Gson().toJson(mediaPusher?.mediaInfo)))
                 .onErrorReturn { e->
                     val res=Result(false,e.message!!,null)
