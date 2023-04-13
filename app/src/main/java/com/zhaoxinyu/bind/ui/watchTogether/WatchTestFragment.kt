@@ -601,7 +601,7 @@ class WatchTestFragment:Fragment() {
                         val nowTime=System.currentTimeMillis()
                         if(nowTime-lastTime>=500){
                             //更新服务器记录的播放进度，每500ms更新一次
-                            Network.watchTogetherService.updatePlayingTimeStamp(MainActivity.loggedUser!!,syncPlayer?.realTimeStamp!!)
+                            val o=Network.watchTogetherService.updatePlayingTimeStamp(MainActivity.loggedUser!!,syncPlayer?.realTimeStamp!!)
                                 .onErrorReturn { e->
                                     val res=Result(false,e.message!!,null)
                                     LogUtil.e("[watchTogetherService]:updatePlayingTimeStamp",e.message!!)

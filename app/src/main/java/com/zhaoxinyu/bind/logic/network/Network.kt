@@ -14,12 +14,13 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 
 object Network {
-    const val severAddress="192.168.148.176"
+    const val severAddress="192.168.3.53"
+    const val srsAddress="192.168.3.53"
     const val BASE_URL="http://${severAddress}:8081/"
 
-    const val STREAM_URL="rtmp://${severAddress}/live/livestream"
+    const val STREAM_URL="rtmp://${srsAddress}/live/livestream"
 
-    const val WATCH_STREAM_URL="http://${severAddress}:8080/live/livestream.flv"
+    const val WATCH_STREAM_URL="http://${srsAddress}:8080/live/livestream.flv"
     //"http://192.168.3.33:8080/live/livestream.flv"
     //"http://192.168.3.33:8080/players/srs_player.html?schema=http"
 
