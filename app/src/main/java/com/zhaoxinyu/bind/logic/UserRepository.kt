@@ -211,7 +211,8 @@ object UserRepository {
         .subscribeOn(Schedulers.io())
         .observeOn(Schedulers.io())
         .subscribe { r ->
-            if(r!=null){
+            LogUtil.d("[userService]:getUserIcon",r.contentLength().toString())
+            if(r.contentLength()!=0L){
                 LogUtil.d("[userService]:getUserIcon",r.contentType().toString())
                 try{
                     val ips=r.byteStream()
