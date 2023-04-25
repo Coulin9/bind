@@ -14,8 +14,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 
 object Network {
-    const val severAddress="192.168.3.53"
-    const val srsAddress="192.168.3.53"
+    const val severAddress="192.168.3.33"
+    const val srsAddress="192.168.3.33"
     const val BASE_URL="http://${severAddress}:8081/"
 
     const val STREAM_URL="rtmp://${srsAddress}/live/livestream"
